@@ -10,5 +10,11 @@ RSpec.describe Matasano do
         expect(matasano.hex_to_base64(hex)).to eq("SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t")
       end
     end
+
+    context "challenge 2" do
+      it "does an XOR combination of two strings" do
+        expect(matasano.xor("1c0111001f010100061a024b53535009181c", "686974207468652062756c6c277320657965")).to eq("746865206b696420646f6e277420706c6179")
+      end
+    end
   end
 end
